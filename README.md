@@ -18,13 +18,15 @@ Labels: Each paper is labeled with a specific category that helps to classify th
 Steps Involved in the Project
 The project follows these key steps to build a successful text classification model:
 
-1. Data Loading
+1. Data Loading :
+
 The dataset consists of multiple JSON files, each containing information about medical papers. These files are loaded into a single Pandas DataFrame for ease of processing. The loading process involves:
 
 Reading JSON Files: Using the pandas.read_json() function to load each JSON file containing the paper data.
 Merging Data: All JSON files are merged into one DataFrame, where each row corresponds to one paper with its associated title, abstract, and category label.
 
-2. Data Preprocessing
+2. Data Preprocessing :
+
 Once the data is loaded into a single DataFrame, it is important to preprocess the text data before feeding it into the model. This step involves:
 
 Cleaning Text: Removing unnecessary characters, special symbols, and irrelevant information from the text.
@@ -32,7 +34,8 @@ Tokenization: Splitting the text into tokens (words or subwords) that the model 
 Label Encoding: The target labels (categories) are encoded numerically to be used in the training process.
 
 
-3. Tokenization and Data Loading
+3. Tokenization and Data Loading :
+
 For BERT to process the text, the data must be tokenized using a BERT tokenizer. This converts the text into numerical representations that BERT can understand. The steps involved are:
 
 Tokenization: Using BertTokenizer to split the text into tokens and convert them into input IDs. The text is padded to ensure that all sequences have the same length.
@@ -41,7 +44,8 @@ Data Splitting: The dataset is split into training and validation sets to ensure
 
 
 
-4. Model Training
+4. Model Training  :
+
 The core of the project is training a BERT model for sequence classification. Key steps in this phase include:
 
 Model Selection: Using a pre-trained BERT model (bert-base-uncased) and fine-tuning it for the specific medical text classification task.
@@ -50,7 +54,8 @@ Training Parameters: The model is trained using specific hyperparameters such as
 
 
 
-5. Evaluation and Metrics
+5. Evaluation and Metrics  :
+
 After training, the model is evaluated on a validation or test set using various metrics:
 
 Accuracy: Measures the percentage of correct classifications.
@@ -59,7 +64,8 @@ Recall: Measures the proportion of true positives out of all actual positives.
 F1-Score: The harmonic mean of precision and recall, providing a single measure of model performance.
 
 
-6. Addressing Class Imbalance
+6. Addressing Class Imbalance :
+
 The dataset may suffer from class imbalance, where certain categories are underrepresented. To tackle this:
 
 Class Weights: Weights are applied to the loss function to give more importance to the minority classes.
